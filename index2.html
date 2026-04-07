@@ -114,8 +114,9 @@ button{
 
 <div class="card">
 <h2>Quizzes</h2>
+    
 <img id="myImage" src="quiz2.jpg" style="display:none;"
-    height="100px;" width="100px;">
+    height="120px;" width="120px;">
 <button onclick="toggleImage()">Quiz 1</button>
 
 <script>
@@ -129,7 +130,22 @@ function toggleImage() {
   }
 }
 </script>
-<button onclick="openViewer('quiz3.jpg')">Quiz 2</button>
+    
+<img id="myImage" src="quiz3.jpg" style="display:none;"
+    height="120px;" width="120px;">
+<button onclick="toggleImage()">Quiz 3</button>
+
+<script>
+function toggleImage() {
+  const img = document.getElementById("myImage");
+
+  if (img.style.display === "none") {
+    img.style.display = "block";
+  } else {
+    img.style.display = "none";
+  }
+}
+</script>
 
 <div class="upload-box">
 <p>Upload your quiz</p>
