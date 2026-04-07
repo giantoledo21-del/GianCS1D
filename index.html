@@ -7,77 +7,85 @@
 
 <style>
 
+/* BODY LAYOUT */
 body{
     margin:0;
     font-family: Tahoma, Helvetica, sans-serif;
     background-color:#18085f;
     color:white;
-}
-
-
-
-header{
-    background:#2a0b53;
-    padding:15px 40px;
-}
-
-nav{
     display:flex;
-    justify-content:space-between;
-    align-items:center;
 }
 
+/* MAIN CONTENT */
+main{
+    flex:1;
+    padding:40px;
+}
+
+/* RIGHT SIDEBAR */
+nav{
+    width:220px;
+    height:100vh;
+    background:#2a0b53;
+    padding:20px;
+    box-sizing:border-box;
+}
+
+/* LOGO */
 .logo{
     color:#edebf3;
+    margin-bottom:30px;
+    text-align:center;
 }
 
+/* NAV LINKS */
 nav ul{
     list-style:none;
-    display:flex;
-    gap:20px;
+    padding:0;
+    text-align:center;
+}
+
+nav ul li{
+    margin:15px 0;
 }
 
 nav a{
     text-decoration:none;
     color:white;
     font-weight:bold;
+    display:block;
 }
 
 nav a:hover{
     color:#7e2424;
 }
 
-
-
-main{
-    padding:40px;
+/* PROFILE SIDE LAYOUT */
+.profile-container{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    background:#2c1c46;
+    padding:30px;
+    border-radius:10px;
+    max-width:800px;
+    margin:auto;
 }
 
-
-
-.profile{
-    text-align:center;
-}
-
-.profile img{
-    width:120px;
-    border-radius:120px;
+.profile-container img{
+    width:150px;
+    border-radius:50%;
     border:3px solid #7e2424;
 }
 
-
-
+/* CARDS */
 .card{
     background:#2c1c46;
     padding:25px;
     margin:25px auto;
     border-radius:10px;
-    max-width:700px;
+    max-width:800px;
     box-shadow:0 0 10px rgba(38, 32, 59, 0.5);
-}
-
-h3{
-    color:#f7f7f7;
 }
 
 footer{
@@ -88,31 +96,20 @@ footer{
 }
 
 </style>
-
 </head>
 
 <body>
 
-<header>
-<nav>
-
-<h2 class="logo">My Portfolio</h2>
-
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="index2.html">Activities</a></li>
-</ul>
-
-</nav>
-</header>
-
+<!-- MAIN CONTENT -->
 <main>
 
-<div class="profile">
-<img src="jiji.jpg" alt="pic ni jiji">
-<h2>Gian Toledo</h2>
-<p>Bachelor of Science in Computer Science</p>
-<p>Cavite State University - Silang</p>
+<div class="profile-container">
+    <img src="jiji.jpg" alt="pic ni jiji">
+    <div>
+        <h2>Gian Toledo</h2>
+        <p>Bachelor of Science in Computer Science</p>
+        <p>Cavite State University - Silang</p>
+    </div>
 </div>
 
 <div class="card">
@@ -123,29 +120,29 @@ footer{
 
 <div class="card">
 <h3>Interest</h3>
-
-<p>
-Playing games. Listening to music.
-</p>
-
+<p>Playing games. Listening to music.</p>
 
 <h3>Skills</h3>
-<p>
-I'm not sure about my skills yet but I hope to improve in coding.
-</p>
+<p>I'm not sure about my skills yet but I hope to improve in coding.</p>
 
 <h3>Goal</h3>
-<p> To Graduate and Live without regrets.</p>
-
-
-
+<p>To Graduate and Live without regrets.</p>
 </div>
-
-</main>
 
 <footer>
 <p>© GGGG</p>
 </footer>
+
+</main>
+
+<!-- RIGHT NAV -->
+<nav>
+    <h2 class="logo">My Portfolio</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index2.html">Activities</a></li>
+    </ul>
+</nav>
 
 </body>
 </html>
