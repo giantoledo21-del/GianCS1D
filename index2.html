@@ -136,17 +136,16 @@ function toggleImage() {
 <button onclick="toggleImage()">Quiz 3</button>
 
 <script>
-function toggleImage() {
-  const img = document.getElementById("myImage");
 
-  if (img.style.display === "none") {
-    img.style.display = "block";
-  } else {
-    img.style.display = "none";
-  }
+function openViewer(src){
+    document.getElementById("viewer").style.display = "block";
+    document.getElementById("viewerImg").src = src;
 }
-</script>
 
+function closeViewer(){
+    document.getElementById("viewer").style.display = "none";
+}
+    
 <div class="upload-box">
 <p>Upload your quiz</p>
 <input type="file">
