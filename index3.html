@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minimal Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      transition: 0.3s;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    input {
+      width: 260px;
+      padding: 12px;
+      font-size: 18px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      margin: 5px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .operators button {
+      background: #ff9500;
+      color: white;
+    }
+
+    .toggle {
+      background: #555;
+      color: #fff;
+    }
+
+    
+    body.light {
+      background: #f4f4f4;
+      color: #000;
+    }
+
+    body.light input {
+      background: #fff;
+      color: #000;
+    }
+
+    
+    body.dark {
+      background: #121212;
+      color: #fff;
+    }
+
+    body.dark input {
+      background: #1e1e1e;
+      color: #0f0;
+    }
+  </style>
+</head>
+<body class="dark">
+
+<div class="container">
+  <h2>Simple Calculator</h2>
+
+  <input type="text" id="input" placeholder="Type numbers">
+
+  <div class="operators">
+    <button onclick="addOp('+')">+</button>
+    <button onclick="addOp('-')">−</button>
+    <button onclick="addOp('*')">×</button>
+    <button onclick="addOp('/')">÷</button>
+    <button onclick="calculate()">=</button>
+  </div>
+
+  <br>
+  <button onclick="toggleMode()" class="toggle">Dark Mode</button>
+</div>
+
+<script>
+  function addOp(op) {
+    document.getElementById("input").value += op;
+  }
+
+  function calculate() {
+    try {
+      document.getElementById("input").value =
+        eval(document.getElementById("input").value);
+    } catch {
+      alert("Invalid input");
+    }
+  }
+
+  function toggleMode() {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+  }
+</script>
+
+</body>
+</html>
